@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="/">Inicio</a>
+
+<h2>Menú de acceso</h2>
+
+<h3>Rol: {{ rol }}</h3>
+
+{% if rol == "admin" %}
+    {% set menu = ["Usuarios", "Configuración", "Reportes", "Ventas", "Administración"] %}
+{% elif rol == "editor" %}
+    {% set menu = ["Editar contenido", "Publicaciones", "Reportes"] %}
+{% else %}
+    {% set menu = ["Ver contenido"] %}
+{% endif %}
+
+<ul>
+    {% for opcion in menu %}
+        <li>{{ opcion }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

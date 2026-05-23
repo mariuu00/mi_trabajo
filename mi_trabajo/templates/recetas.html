@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="/">Inicio</a>
+
+<h2>Lista recetas</h2>
+{% for receta in recetas %}
+
+{% if receta.dificultad == "fácil" %}
+
+<div class="facil">
+
+    {% elif receta.dificultad == "media" %}
+
+<div class="media">
+
+    {% else %}
+
+<div class="dificil">
+
+    {% endif %}
+
+        <h3>{{ receta.nombre }}</h3>
+        <p>Dificultad: {{ receta.dificultad }}</p>
+        <p>Tiempo: {{ receta.tiempo }} minutos</p>
+
+</div>
+
+{% endfor %}
+{% endblock %}

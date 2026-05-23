@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto FastAPI</title>
+</head>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .contenedor{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .facil{
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .media{
+            background-color: khaki;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .dificil{
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+
+
+<body>
+    <header>
+        <h1>{% block title %}Proyecto FastAPI{% endblock %}</h1>
+    </header>
+
+<div>
+{% block content %}
+
+    <nav>
+        | <a href="/">Inicio</a> |
+        <a href="/mascota">Mascotas</a> |
+        <a href="/recetas">Recetas</a> |
+        <a href="/acceso/admin">Acceso</a> |
+        
+    </nav>
+{% endblock %}
+</div>
+
+</body>
+</html>

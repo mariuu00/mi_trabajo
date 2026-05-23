@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="/">Inicio</a>
+
+<h2>Información de la mascota</h2>
+
+<p><strong>Nombre:</strong> {{ mascota.nombre }}</p>
+<p><strong>Especie:</strong> {{ mascota.especie }}</p>
+<p><strong>Edad:</strong> {{ mascota.edad }} años</p>
+
+{% endblock %}
